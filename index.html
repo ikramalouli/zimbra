@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Zimbra - Boîte de réception</title>
+<link href="mail.css" rel="stylesheet"/>
+<script>
+    function showMail(id) {
+      let all = document.querySelectorAll('.preview-msg');
+      all.forEach(p => p.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+    window.onload = () => showMail('hek1');
+  </script>
+</head>
+<body>
+<header>
+    Zimbra : Mail
+  </header>
+<div class="container">
+<aside>
+<ul class="folders">
+<li class="active" id="btn-inbox">📥 Réception</li>
+<li id="btn-sent">✉️ Envoyé</li>
+<li id="btn-new-msg" onclick="openCompose()">📝 Nouveau message</li>
+</ul>
+</aside>
+<main>
+<div class="mail-list">
+<div class="mail-item read" onclick="showMail('hek1')">
+<div>
+<div class="mail-sender">Hecquet</div>
+<div class="mail-subject"> Re - discussion sur décision du jury </div>
+</div>
+<div class="mail-date">14 Juil</div>
+</div>
+<div class="mail-item read" onclick="showMail('hek2')">
+<div>
+<div class="mail-sender">Hecquet</div>
+<div class="mail-subject"> [LE2] Décision du jury - présence demandée </div>
+</div>
+<div class="mail-date">09 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('alx1')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]Votre véhicule vous attend</div>
+</div>
+<div class="mail-date">10 Juil</div>
+</div>
+<div class="mail-item read" onclick="showMail('ig2i1')">
+<div>
+<div class="mail-sender">Direction IG2I</div>
+<div class="mail-subject">[LE2] Résultats jurys 09.07.25</div>
+</div>
+<div class="mail-date">09 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali2')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]1 clients achètent ces accessoires automobiles</div>
+</div>
+<div class="mail-date">09 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ikram1')">
+<div>
+<div class="mail-sender">Baptiste Pablo</div>
+<div class="mail-subject">Demande de validation du stage</div>
+</div>
+<div class="mail-date">08 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali3')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]Articles expédiés depuis l'Espagne</div>
+</div>
+<div class="mail-date">08 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('tm1')">
+<div>
+<div class="mail-sender">Thomas Maurer</div>
+<div class="mail-subject">[eleves] Bonnes vacances !</div>
+</div>
+<div class="mail-date">07 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali4')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]NOUVEAUX : articles auto et moto</div>
+</div>
+<div class="mail-date">06 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('nc1')">
+<div>
+<div class="mail-sender">Nicolas Cousin</div>
+<div class="mail-subject">[eleves] Mise à jour vers Zimbra 10</div>
+</div>
+<div class="mail-date">06 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('miro1')">
+<div>
+<div class="mail-sender">The Miro Team</div>
+<div class="mail-subject">We’re updating our Privacy Policy</div>
+</div>
+<div class="mail-date">05 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('alumni1')">
+<div>
+<div class="mail-sender">Centrale Lille Alumni</div>
+<div class="mail-subject">[PUB NEWS]L'infosite de Juin 2025</div>
+</div>
+<div class="mail-date">04 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('wifi1')">
+<div>
+<div class="mail-sender">Loïc Houttemane</div>
+<div class="mail-subject">pb de Wifi : résolu</div>
+</div>
+<div class="mail-date">04 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('wifi2')">
+<div>
+<div class="mail-sender">Loïc Houttemane</div>
+<div class="mail-subject">[institut.messagerie] pb de Wifi</div>
+</div>
+<div class="mail-date">03 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('gui1')">
+<div>
+<div class="mail-sender">Guilherme</div>
+<div class="mail-subject">Message de Guilherme Espindola Winck</div>
+</div>
+<div class="mail-date">03 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali5')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]Recommandé pour vous : gadgets électroniques</div>
+</div>
+<div class="mail-date">02 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ig2i2')">
+<div>
+<div class="mail-sender">Direction IG2I</div>
+<div class="mail-subject">[LE2] [URGENT] Réinscription CVEC - boursier</div>
+</div>
+<div class="mail-date">02 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali6')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]Bon plan du jour !</div>
+</div>
+<div class="mail-date">01 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('ali7')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS]Votre code de vérification AliExpress</div>
+</div>
+<div class="mail-date">01 Juil</div>
+</div>
+<div class="mail-item" onclick="showMail('mlp1')">
+<div>
+<div class="mail-sender">Pole MLP</div>
+<div class="mail-subject">Planning des soutenances</div>
+</div>
+<div class="mail-date">01 Juil</div>
+</div>
+<div class="mail-item unread" onclick="showMail('mail21')">
+<div>
+<div class="mail-sender">Campus France</div>
+<div class="mail-subject">[Important] Prochaine étape de votre dossier</div>
+</div>
+<div class="mail-date">30 Juin</div>
+</div>
+<div class="mail-item read" onclick="showMail('mail22')">
+<div>
+<div class="mail-sender">Le Bon Coin</div>
+<div class="mail-subject">Votre annonce a été validée</div>
+</div>
+<div class="mail-date">29 Juin</div>
+</div>
+<div class="mail-item unread" onclick="showMail('mail23')">
+<div>
+<div class="mail-sender">Air Arabia</div>
+<div class="mail-subject">[Vol modifié] Veuillez vérifier votre réservation</div>
+</div>
+<div class="mail-date">28 Juin</div>
+</div>
+<div class="mail-item read" onclick="showMail('mail24')">
+<div>
+<div class="mail-sender">IG2I Cours</div>
+<div class="mail-subject">Devoirs à rendre pour juillet</div>
+</div>
+<div class="mail-date">28 Juin</div>
+</div>
+<div class="mail-item unread" onclick="showMail('mail25')">
+<div>
+<div class="mail-sender">CAF</div>
+<div class="mail-subject">Attestation de droits disponible</div>
+</div>
+<div class="mail-date">27 Juin</div>
+</div>
+<div class="mail-item" onclick="showMail('mail26')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">01 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail27')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">05 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail28')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">13 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail29')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">06 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail30')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">05 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail31')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">20 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail32')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">28 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail33')">
+<div>
+<div class="mail-sender">Crous Lille</div>
+<div class="mail-subject">[Logement] Paiement du loyer</div>
+</div>
+<div class="mail-date">13 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail34')">
+<div>
+<div class="mail-sender">Crous Lille</div>
+<div class="mail-subject">[Logement] Paiement du loyer</div>
+</div>
+<div class="mail-date">29 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail35')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">02 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail36')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">03 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail37')">
+<div>
+<div class="mail-sender">Crous Lille</div>
+<div class="mail-subject">[Logement] Paiement du loyer</div>
+</div>
+<div class="mail-date">07 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail38')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">04 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail39')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">09 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail40')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">02 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail41')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">19 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail42')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">05 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail43')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">15 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail44')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">10 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail45')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">10 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail46')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">14 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail47')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">09 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail48')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">16 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail49')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">03 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail50')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">15 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail51')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">28 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail52')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">02 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail53')">
+<div>
+<div class="mail-sender">Etienne Lefèvre</div>
+<div class="mail-subject">Projet web - besoin d'aide</div>
+</div>
+<div class="mail-date">11 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail54')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">14 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail55')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">04 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail56')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">25 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail57')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">03 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail58')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">09 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail59')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">06 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail60')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">24 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail61')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">11 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail62')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">14 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail63')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">09 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail64')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">22 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail65')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">20 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail66')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">25 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail67')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">14 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail68')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">18 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail69')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">03 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail70')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">25 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail71')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">27 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail72')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">15 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail73')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">04 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail74')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">10 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail75')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">02 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail76')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">04 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail77')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">30 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail78')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">28 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail79')">
+<div>
+<div class="mail-sender">Crous Lille</div>
+<div class="mail-subject">[Logement] Paiement du loyer</div>
+</div>
+<div class="mail-date">21 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail80')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">05 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail81')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">01 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail82')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">07 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail83')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">21 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail84')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">07 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail85')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">04 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail86')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">17 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail87')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">12 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail88')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">02 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail89')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">05 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail90')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">26 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail91')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">19 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail92')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">24 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail93')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">14 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail94')">
+<div>
+<div class="mail-sender">Etienne Lefèvre</div>
+<div class="mail-subject">Projet web - besoin d'aide</div>
+</div>
+<div class="mail-date">10 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail95')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">03 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail96')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">19 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail97')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">20 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail98')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">16 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail99')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">22 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail100')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">12 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail101')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">11 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail102')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">11 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail103')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">13 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail104')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">21 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail105')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">06 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail106')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">10 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail107')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">09 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail108')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">02 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail109')">
+<div>
+<div class="mail-sender">Decathlon</div>
+<div class="mail-subject">[Offre spéciale] -20% sur les articles de sport</div>
+</div>
+<div class="mail-date">20 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail110')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">15 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail111')">
+<div>
+<div class="mail-sender">Prof. Martin</div>
+<div class="mail-subject">[COURS] Changement de salle demain</div>
+</div>
+<div class="mail-date">09 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail112')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">21 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail113')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">10 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail114')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">06 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail115')">
+<div>
+<div class="mail-sender">Etienne Lefèvre</div>
+<div class="mail-subject">Projet web - besoin d'aide</div>
+</div>
+<div class="mail-date">11 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail116')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">02 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail117')">
+<div>
+<div class="mail-sender">AliExpress</div>
+<div class="mail-subject">[PUB NEWS] Super promos cette semaine !</div>
+</div>
+<div class="mail-date">21 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail118')">
+<div>
+<div class="mail-sender">LinkedIn</div>
+<div class="mail-subject">Vous avez 3 nouvelles notifications</div>
+</div>
+<div class="mail-date">09 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail119')">
+<div>
+<div class="mail-sender">Crous Lille</div>
+<div class="mail-subject">[Logement] Paiement du loyer</div>
+</div>
+<div class="mail-date">17 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail120')">
+<div>
+<div class="mail-sender">Slack</div>
+<div class="mail-subject">Invitation à rejoindre l’espace IG2I-Projets</div>
+</div>
+<div class="mail-date">02 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail121')">
+<div>
+<div class="mail-sender">Etienne Lefèvre</div>
+<div class="mail-subject">Projet web - besoin d'aide</div>
+</div>
+<div class="mail-date">03 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail122')">
+<div>
+<div class="mail-sender">IG2I Admin</div>
+<div class="mail-subject">[Rappel] Enquête de satisfaction étudiante</div>
+</div>
+<div class="mail-date">01 Jul</div>
+</div><div class="mail-item" onclick="showMail('mail123')">
+<div>
+<div class="mail-sender">SNCF</div>
+<div class="mail-subject">[Train] Détails de votre trajet Paris - Lille</div>
+</div>
+<div class="mail-date">23 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail124')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">22 Jun</div>
+</div><div class="mail-item" onclick="showMail('mail125')">
+<div>
+<div class="mail-sender">Parcoursup</div>
+<div class="mail-subject">Fin des confirmations le 20 juillet</div>
+</div>
+<div class="mail-date">13 Jun</div>
+</div></div>
+<div class="mail-list hidden" id="sent-mails">
+</div>
+<div class="mail-list hidden" id="spam-mails">
+<div style="padding: 20px; color: #777;">Aucun résultat n’a été trouvé.</div>
+</div>
+<div class="mail-list hidden" id="trash-mails">
+<div style="padding: 20px; color: #777;">Aucun résultat n’a été trouvé.</div>
+</div>
+<div class="preview">
+<div class="preview-msg hidden" id="mail21">
+<h3>Campus France - [Important] Prochaine étape de votre dossier (30 Juin)</h3>
+<p>Merci de compléter votre dossier avant la date limite mentionnée sur la plateforme.</p>
+</div>
+<div class="preview-msg hidden" id="mail22">
+<h3>Le Bon Coin - Votre annonce a été validée (29 Juin)</h3>
+<p>Votre annonce est maintenant visible par tous les utilisateurs.</p>
+</div>
+<div class="preview-msg hidden" id="mail23">
+<h3>Air Arabia - [Vol modifié] Veuillez vérifier votre réservation (28 Juin)</h3>
+<p>Votre vol a subi des modifications. Merci de consulter vos emails ou votre espace client.</p>
+</div>
+<div class="preview-msg hidden" id="mail24">
+<h3>IG2I Cours - Devoirs à rendre pour juillet (28 Juin)</h3>
+<p>Les travaux dirigés de Java sont à remettre avant le 10 juillet.</p>
+</div>
+<div class="preview-msg hidden" id="mail25">
+<h3>CAF - Attestation de droits disponible (27 Juin)</h3>
+<p>Vous pouvez télécharger votre attestation depuis votre espace personnel.</p>
+</div>
+<div class="preview-msg" id="hek1">
+<div class="header" style="background-color:#dbeef8; padding:10px; font-weight:bold; font-size:18px; border-bottom:1px solid #ccc;">
+        Re - discussion sur décision du jury
+      </div>
+<div class="meta"><div class="meta">
+<div><strong>Expéditeur :</strong> <span>hecquet@ig2i.centralelille.fr</span> de la part de <strong>Hecquet</strong> &lt;hecquet@ig2i.centralelille.fr&gt;</div>
+<div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div>
+</div></div>
+<div style="padding:20px; font-size:16px;">
+        Bonjour Naji,<br/><br/>
+        Je comprends votre situation, mais je pense qu’il serait vraiment préférable que nous puissions en discuter de vive voix à l’IG2I. C’est un sujet important qui mérite un échange direct.<br/><br/>
+        Je vous informe également que l’école fermera ses portes mardi, donc je vous invite à venir avant cette date si possible.<br/><br/>
+<i>Cordialement,</i><br/><br/>
+<strong style="color:#003366;">Michel <span style="background-color:#ffff99;">HECQUET</span></strong><br/>
+        Directeur de l’IG2I – Centrale Lille / Professeur des Universités<br/>
+        L2EP « équipe Outils et Méthodes Numériques »<br/>
+        IG2I, 13 rue Jean Souvraz, 62300 LENS / https://ig2i.centralelille.fr<br/>
+        https://centralelille.fr
+      </div>
+<div class="footer">
+        Répondre – Rép. à tous – Faire suivre – Autres actions
+      </div>
+</div>
+<div class="preview-msg" id="hek2">
+<div class="header" style="background-color:#dbeef8; padding:10px; font-weight:bold; font-size:18px; border-bottom:1px solid #ccc;">
+    [LE2] Décision du jury - présence demandée
+  </div>
+<div class="meta"><div class="meta">
+<div><strong>Expéditeur :</strong> <span>hecquet@ig2i.centralelille.fr</span> de la part de <strong>Hecquet</strong> &lt;hecquet@ig2i.centralelille.fr&gt;</div>
+<div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div>
+<div>11 Juil 2025 09:42</div>
+</div></div>
+<div style="padding:20px; font-size:16px;">
+    Bonjour,<br/><br/>
+    Suite aux décisions prises lors du jury de juillet, nous vous prions de vous présenter à l'IG2I afin de discuter de votre situation pédagogique.<br/><br/>
+    Votre présence est importante pour échanger sur les perspectives de poursuite d’études.<br/><br/>
+<i>Cordialement,</i><br/><br/>
+<strong style="color:#003366;">Michel <span style="background-color:#ffff99;">HECQUET</span></strong><br/>
+    Directeur de l’IG2I – Centrale Lille / Professeur des Universités<br/>
+    L2EP « équipe Outils et Méthodes Numériques »<br/>
+    IG2I, 13 rue Jean Souvraz, 62300 LENS / https://ig2i.centralelille.fr<br/>
+    https://centralelille.fr
+  </div>
+<div class="footer">
+    Répondre – Rép. à tous – Faire suivre – Autres actions
+  </div>
+</div>
+<div class="preview-msg hidden" id="alx1"><div class="header">AliExpress - [PUB NEWS]Votre véhicule vous attend</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre véhicule vous attend - Ne manquez pas cet article : ZJCASS Large SUV</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ig2i1"><div class="header">Direction IG2I - [LE2] Résultats jurys 09.07.25</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>direction.ig2i@mail.fr</span> de la part de <strong>Direction IG2I</strong> &lt;direction.ig2i@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous trouverez ci-joint le PV de jury pour la session du 9 juillet 2025.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali2"><div class="header">AliExpress - [PUB NEWS]1 clients achètent ces accessoires automobiles</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Recommandé pour vous : Autocollants phosphorescents</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ikram1"><div class="header">Baptiste Pablo - Demande de validation du stage</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>baptiste.pablo@ig2i.centralelille.fr</span> de la part de <strong>Baptiste Pablo</strong> &lt;baptiste.pablo@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Je souhaite confirmer la date de ma soutenance de stage prévue fin août.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali3"><div class="header">AliExpress - [PUB NEWS]Articles expédiés depuis l'Espagne</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Livraison gratuite sur votre sélection auto-moto.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="tm1"><div class="header">Thomas Maurer - [eleves] Bonnes vacances !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>thomas.maurer@gmail.com</span> de la part de <strong>Thomas Maurer</strong> &lt;thomas.maurer@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Cher·ère·s étudiant·e·s, au moment où s’achèvent les cours...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali4"><div class="header">AliExpress - [PUB NEWS]NOUVEAUX : articles auto et moto</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>C'est maintenant ou jamais pour acheter vos accessoires.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="nc1"><div class="header">Nicolas Cousin - [eleves] Mise à jour vers Zimbra 10</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>nicolas.cousin@ig2i.centralelille.fr</span> de la part de <strong>Nicolas Cousin</strong> &lt;nicolas.cousin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le prestataire en charge de la mise à jour effectuera l’opération...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="miro1"><div class="header">The Miro Team - We’re updating our Privacy Policy</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>the.team@outlook.com</span> de la part de <strong>The Miro Team</strong> &lt;the.team@outlook.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Here’s an overview of what’s changing...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="alumni1"><div class="header">Centrale Lille Alumni - [PUB NEWS]L'infosite de Juin 2025</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>centrale.alumni@ig2i.centralelille.fr</span> de la part de <strong>Centrale Lille Alumni</strong> &lt;centrale.alumni@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez les actualités de juin.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="wifi1"><div class="header">Loïc Houttemane - pb de Wifi : résolu</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>loïc.houttemane@yahoo.fr</span> de la part de <strong>Loïc Houttemane</strong> &lt;loïc.houttemane@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Les soucis de connexion sont maintenant résolus.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="wifi2"><div class="header">Loïc Houttemane - [institut.messagerie] pb de Wifi</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>loïc.houttemane@yahoo.fr</span> de la part de <strong>Loïc Houttemane</strong> &lt;loïc.houttemane@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour à tous, Nous rencontrons actuellement un problème...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="gui1"><div class="header">Guilherme - Message de Guilherme Espindola Winck</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>guilherme@gmail.com</span> de la part de <strong>Guilherme</strong> &lt;guilherme@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour, Ce message s'adresse à la promotion LE2...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali5"><div class="header">AliExpress - [PUB NEWS]Recommandé pour vous : gadgets électroniques</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez les gadgets en promo cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ig2i2"><div class="header">Direction IG2I - [LE2] [URGENT] Réinscription CVEC - boursier</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>direction.ig2i@mail.fr</span> de la part de <strong>Direction IG2I</strong> &lt;direction.ig2i@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Attention, si vous êtes boursier, vous devez...</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali6"><div class="header">AliExpress - [PUB NEWS]Bon plan du jour !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>C'est maintenant le moment idéal pour commander vos articles préférés.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="ali7"><div class="header">AliExpress - [PUB NEWS]Votre code de vérification AliExpress</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre code de vérification est : 243557</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mlp1"><div class="header">Pole MLP - Planning des soutenances</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>pole.mlp@mail.fr</span> de la part de <strong>Pole MLP</strong> &lt;pole.mlp@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Veuillez trouver le planning à jour des soutenances LE2.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail26"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>campus.france@mail.fr</span> de la part de <strong>Campus France</strong> &lt;campus.france@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail27"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>le.coin@yahoo.fr</span> de la part de <strong>Le Bon Coin</strong> &lt;le.coin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail28"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>air.arabia@ig2i.centralelille.fr</span> de la part de <strong>Air Arabia</strong> &lt;air.arabia@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail29"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.cours@gmail.com</span> de la part de <strong>IG2I Cours</strong> &lt;ig2i.cours@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail30"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>caf@ig2i.centralelille.fr</span> de la part de <strong>CAF</strong> &lt;caf@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail31"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail32"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail33"><div class="header">Crous Lille - [Logement] Paiement du loyer</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour,<br/><br/>Nous vous rappelons que le règlement de votre loyer est attendu avant le 5 du mois en cours.<br/><br/>Cordialement,<br/>Service Logement</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail34"><div class="header">Crous Lille - [Logement] Paiement du loyer</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour,<br/><br/>Nous vous rappelons que le règlement de votre loyer est attendu avant le 5 du mois en cours.<br/><br/>Cordialement,<br/>Service Logement</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail35"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail36"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail37"><div class="header">Crous Lille - [Logement] Paiement du loyer</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour,<br/><br/>Nous vous rappelons que le règlement de votre loyer est attendu avant le 5 du mois en cours.<br/><br/>Cordialement,<br/>Service Logement</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail38"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>crous.lille@ig2i.centralelille.fr</span> de la part de <strong>Crous Lille</strong> &lt;crous.lille@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail39"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>crous.lille@ig2i.centralelille.fr</span> de la part de <strong>Crous Lille</strong> &lt;crous.lille@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail40"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail41"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail42"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>crous.lille@ig2i.centralelille.fr</span> de la part de <strong>Crous Lille</strong> &lt;crous.lille@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail43"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail44"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail45"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail46"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail47"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail48"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail49"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail50"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail51"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail52"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail53"><div class="header">Etienne Lefèvre - Projet web - besoin d'aide</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Tu peux me donner ton avis sur la maquette que j’ai envoyée ?</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail54"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail55"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail56"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail57"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail58"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>etienne.lefèvre@outlook.com</span> de la part de <strong>Etienne Lefèvre</strong> &lt;etienne.lefèvre@outlook.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail59"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail60"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail61"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail62"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail63"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail64"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail65"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail66"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail67"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail68"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail69"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail70"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail71"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail72"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail73"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail74"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail75"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail76"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail77"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail78"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail79"><div class="header">Crous Lille - [Logement] Paiement du loyer</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour,<br/><br/>Nous vous rappelons que le règlement de votre loyer est attendu avant le 5 du mois en cours.<br/><br/>Cordialement,<br/>Service Logement</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail80"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail81"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail82"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>parcoursup@mail.fr</span> de la part de <strong>Parcoursup</strong> &lt;parcoursup@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail83"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail84"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>crous.lille@ig2i.centralelille.fr</span> de la part de <strong>Crous Lille</strong> &lt;crous.lille@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail85"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail86"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail87"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail88"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail89"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail90"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail91"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail92"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail93"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail94"><div class="header">Etienne Lefèvre - Projet web - besoin d'aide</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Tu peux me donner ton avis sur la maquette que j’ai envoyée ?</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail95"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail96"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail97"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail98"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail99"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>etienne.lefèvre@outlook.com</span> de la part de <strong>Etienne Lefèvre</strong> &lt;etienne.lefèvre@outlook.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail100"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail101"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail102"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail103"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail104"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail105"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail106"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail107"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>sncf@yahoo.fr</span> de la part de <strong>SNCF</strong> &lt;sncf@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail108"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail109"><div class="header">Decathlon - [Offre spéciale] -20% sur les articles de sport</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Prépare-toi pour la rentrée sportive !</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail110"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail111"><div class="header">Prof. Martin - [COURS] Changement de salle demain</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Le cours de systèmes embarqués aura lieu en salle B25.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail112"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail113"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>ig2i.admin@ig2i.centralelille.fr</span> de la part de <strong>IG2I Admin</strong> &lt;ig2i.admin@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail114"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>decathlon@mail.fr</span> de la part de <strong>Decathlon</strong> &lt;decathlon@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail115"><div class="header">Etienne Lefèvre - Projet web - besoin d'aide</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Tu peux me donner ton avis sur la maquette que j’ai envoyée ?</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail116"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>prof..martin@yahoo.fr</span> de la part de <strong>Prof. Martin</strong> &lt;prof..martin@yahoo.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail117"><div class="header">AliExpress - [PUB NEWS] Super promos cette semaine !</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Ne ratez pas les offres du moment sur les accessoires électroniques.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail118"><div class="header">LinkedIn - Vous avez 3 nouvelles notifications</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Découvrez qui a consulté votre profil cette semaine.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail119"><div class="header">Crous Lille - [Logement] Paiement du loyer</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Bonjour,<br/><br/>Nous vous rappelons que le règlement de votre loyer est attendu avant le 5 du mois en cours.<br/><br/>Cordialement,<br/>Service Logement</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail120"><div class="header">Slack - Invitation à rejoindre l’espace IG2I-Projets</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>etienne.lefèvre@outlook.com</span> de la part de <strong>Etienne Lefèvre</strong> &lt;etienne.lefèvre@outlook.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Vous avez été invité à rejoindre le Slack de projet.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail121"><div class="header">Etienne Lefèvre - Projet web - besoin d'aide</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Tu peux me donner ton avis sur la maquette que j’ai envoyée ?</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail122"><div class="header">IG2I Admin - [Rappel] Enquête de satisfaction étudiante</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>aliexpress@ig2i.centralelille.fr</span> de la part de <strong>AliExpress</strong> &lt;aliexpress@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Merci de prendre 5 minutes pour répondre à notre enquête.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail123"><div class="header">SNCF - [Train] Détails de votre trajet Paris - Lille</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>linkedin@mail.fr</span> de la part de <strong>LinkedIn</strong> &lt;linkedin@mail.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>Votre réservation est confirmée pour le 19 juillet à 14h.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail124"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>crous.lille@ig2i.centralelille.fr</span> de la part de <strong>Crous Lille</strong> &lt;crous.lille@ig2i.centralelille.fr&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+<div class="preview-msg hidden" id="mail125"><div class="header">Parcoursup - Fin des confirmations le 20 juillet</div><div class="meta"><div class="meta"><div class="meta"><div><strong>Expéditeur :</strong> <span>slack@gmail.com</span> de la part de <strong>Slack</strong> &lt;slack@gmail.com&gt;</div><div><strong>À :</strong> "Naji Hassain" &lt;naji.hassain@ig2i.centralelille.fr&gt;</div></div></div></div><div class="mail-content"><p>N’oubliez pas de valider vos vœux avant la date limite.</p></div><div class="footer">Répondre – Rép. à tous – Faire suivre – Autres actions</div></div>
+</div>
+</main>
+</div>
+<div class="modal hidden" id="composeModal">
+<div class="modal-content">
+<div class="modal-header">
+<span class="close-btn" onclick="closeCompose()">✖</span>
+<h2>Nouveau message</h2>
+</div>
+<div class="modal-body">
+<label for="destinataire">Destinataire</label>
+<input id="destinataire" placeholder="exemple@domaine.com" type="text"/>
+<label for="titre">Titre</label>
+<input id="titre" placeholder="Sujet du message" type="text"/>
+<label for="message">Message</label>
+<textarea id="message" placeholder="Écrivez votre message ici..." rows="8"></textarea>
+<button class="send-btn" onclick="sendMessage()">Envoyer</button>
+</div>
+</div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mailItems = document.querySelectorAll('.mail-item');
+    
+    mailItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Marquer l'élément comme lu en supprimant "unread" et ajoutant "read"
+        item.classList.remove('unread');
+        item.classList.add('read');
+
+        // Afficher le contenu correspondant
+        const id = item.getAttribute('onclick').match(/showMail\('([^']+)'\)/)[1];
+        document.querySelectorAll('.preview-msg').forEach(msg => msg.classList.add('hidden'));
+        document.getElementById(id).classList.remove('hidden');
+        
+      });
+    });
+    const inboxBtn = document.getElementById('btn-inbox');
+    const sentBtn = document.getElementById('btn-sent');
+    const inboxList = document.querySelector('.mail-list');
+    const sentList = document.getElementById('sent-mails');
+    const previews = document.querySelectorAll('.preview-msg');
+
+    function hideAllPreviews() {
+      previews.forEach(p => p.classList.add('hidden'));
+    }
+    sentBtn.addEventListener('click', () => {
+      inboxList.classList.add('hidden');
+      sentList.classList.remove('hidden');
+      inboxBtn.classList.remove('active');
+      sentBtn.classList.add('active');
+      hideAllPreviews();
+    });
+
+    inboxBtn.addEventListener('click', () => {
+      inboxList.classList.remove('hidden');
+      sentList.classList.add('hidden');
+      sentBtn.classList.remove('active');
+      inboxBtn.classList.add('active');
+    });
+
+    const sentMessages = [
+    ["sent31", "discussion décision jury", "14 juil", 
+        "Bonjour M. Hecquet,\n Je vous écris pour vous informer que je ne pourrai malheureusement pas me rendre à l’IG2I dans les prochains jours en raison de circonstances familiales imprévues.\nCependant, je souhaiterais vivement pouvoir échanger avec vous au sujet de la décision d’exclusion qui me concerne. Serait-il possible d’en discuter à distance (par téléphone ou visioconférence) à votre convenance ?\nJe reste disponible selon vos disponibilités.\nBien cordialement,\nNaji Hassain", 
+        "michelhecquet@ig2i.centralelille.fr"
+    ],
+  ["sent30", "Projet info oraux !", "20 Mar",
+    "Pour le client, faut qu'il envoie notre note au prof, moi c'est bon j'ai fait la video\nNaji",
+    "groupe.oral@ig2i.fr"],
+
+  ["sent29", "copies de maths", "15 Mar",
+    "Heey, envoie ici les copies stp Yanis\n\nNaji",
+    "yanis.elhassani@gmail.com"],
+
+  ["sent28", "Code source bloqué", "11 Mar",
+    "Hey Julie,\n\nT’as réussi à exécuter le backend du projet Spring ? J’ai une erreur sur le port 8080.\n\nTu peux m’aider ?\nNaji",
+    "julie.nguyen@etu.ig2i.fr"],
+
+  ["sent27", "Besoin de conseil mémoire", "06 Mar",
+    "Bonjour M. Charpentier,\n\nAuriez-vous un moment pour discuter de mon plan de mémoire ? Je suis un peu perdu.\n\nMerci !\nNaji Hassain",
+    "thomas.charpentier@ig2i.fr"],
+
+  ["sent26", "Choix du sujet de projet S2", "01 Mar",
+    "Bonjour,\n\nJe souhaite choisir le sujet 3 (analyse de données mobiles) pour mon projet du semestre 2.\n\nMerci de prendre en compte ma demande.\nCordialement,\nNaji Hassain",
+    "projets2@ig2i.fr"],
+
+  ["sent25", "Dépôt du rapport", "25 Fév",
+    "Bonjour,\n\nJe viens de déposer mon rapport sur Moodle. Est-ce que vous le voyez bien de votre côté ?\n\nMerci,\nNaji",
+    "encadrant.pfe@ig2i.fr"],
+
+  ["sent24", "Infos stage entreprise", "16 Fév",
+    "Salut Omar,\n\nT’as eu des nouvelles de ton contact chez Thales ? Ils prennent encore des stagiaires ?\n\nJe cherche en cybersécu.\nNaji",
+    "omar.sahnoun@etu.ig2i.fr"],
+
+  ["sent23", "Demande de rendez-vous encadrement", "11 Fév",
+    "Bonjour Mme Delarue,\n\nJe souhaiterais prendre rendez-vous avec vous pour discuter de mon avancement dans le projet tuteuré.\n\nCordialement,\nNaji Hassain",
+    "laetitia.delarue@ig2i.fr"],
+
+  ["sent22", "Reprise du cours de robotique", "05 Fév",
+    "Bonjour,\n\nLe cours de robotique reprend bien le 12 février comme prévu ?\n\nMerci pour la confirmation,\nNaji",
+    "robotique@ig2i.fr"],
+
+  ["sent21", "Annulation projet hackathon", "28 Jan",
+    "Salut l’équipe,\n\nJe dois me désister du hackathon, j’ai un empêchement familial ce week-end.\n\nBon courage à vous !\nNaji",
+    "groupe.hackathon@ig2i.fr"],
+
+  ["sent20", "Sujet de TP non accessible", "22 Jan",
+    "Bonjour Mme Alvarez,\n\nLe sujet du TP7 n’est pas disponible sur l’espace de cours. Pourriez-vous vérifier ?\n\nCordialement,\nNaji Hassain",
+    "maria.alvarez@ig2i.fr"],
+
+  ["sent19", "Inscriptions sport second semestre", "15 Jan",
+    "Bonjour,\n\nJe souhaite m’inscrire en option natation pour le S2. Est-ce encore possible ?\n\nMerci,\nNaji",
+    "sports@ig2i.fr"],
+
+  ["sent18", "Demande de corrigé du DS", "09 Jan",
+    "Bonjour,\n\nPourriez-vous partager la correction du DS de mécanique du 5 janvier ?\n\nMerci d’avance,\nNaji Hassain",
+    "enseignant.meca@ig2i.fr"],
+
+  ["sent17", "Échange sur la mission Data", "06 Jan",
+    "Salut Hugo,\n\nT’as accepté la mission Data chez Inetum ? Tu peux m’en parler vite fait ?\n\nCurieux d’avoir ton avis.\nNaji",
+    "hugo.delaporte@etu.ig2i.fr"],
+
+  ["sent16", "Absence justifiée partiel", "12 Déc",
+    "Bonjour Mme Leroy,\n\nJe vous transmets mon certificat médical pour l’absence au partiel de maths du 9 décembre.\n\nMerci pour votre compréhension.\nCordialement,\nNaji Hassain",
+    "claire.leroy@ig2i.fr"],
+
+  ["sent15", "Partage du planning du module Java", "08 Déc",
+    "Salut Théo,\n\nTu peux m’envoyer le planning du module Java ? J’ai zappé de le noter.\n\nMerci mec !\nNaji",
+    "theo.ramos@etu.ig2i.fr"],
+
+  ["sent14", "Relevé de notes S1", "05 Déc",
+    "Bonjour,\n\nAuriez-vous la possibilité de m’envoyer mon relevé de notes du semestre 1 ?\n\nCordialement,\nNaji Hassain",
+    "scolarite@ig2i.fr"],
+
+  ["sent13", "Projet indus", "01 Déc",
+    "Envoie le drive stp",
+    "baptiste.moujahid@gmail.com"],
+
+  ["sent12", "Fichier manquant TD info", "27 Nov",
+    "Bonjour M. Lefèvre,\n\nLe fichier td5.c n’apparaît pas sur Moodle. Pourriez-vous le recharger ?\n\nMerci,\nNaji",
+    "julien.lefevre@ig2i.fr"],
+
+  ["sent11", "Problème de salle", "21 Nov",
+    "Salut Lisa,\n\nLa salle G204 est occupée demain. On décale notre réunion à la BU ?\n\nÀ demain,\nNaji",
+    "lisa.bernard@etu.ig2i.fr"],
+
+  ["sent10", "Sujet d’examen d’annales", "15 Nov",
+    "Bonjour M. Lemoine,\n\nAuriez-vous des sujets d’annales de Systèmes pour nous entraîner ?\n\nMerci,\nCordialement,\nNaji",
+    "francois.lemoine@ig2i.fr"],
+
+  ["sent09", "Présentation à imprimer", "10 Nov",
+    "Hey Yasmine,\n\nTu peux imprimer nos slides pour la soutenance de demain ? Je suis en galère d’imprimante.\n\nMerci d’avance !\nNaji",
+    "yasmine.elalamy@etu.ig2i.fr"],
+
+  ["sent08", "Correction partiel physique", "04 Nov",
+    "Bonjour Mme Martin,\n\nAuriez-vous la correction du partiel de physique du 27 octobre ?\n\nMerci d’avance,\nBien cordialement,\nNaji Hassain",
+    "elise.martin@ig2i.fr"],
+
+  ["sent07", "Lien du projet GitHub", "25 Oct",
+    "Salut Réda,\n\nVoici le lien du repo GitHub pour notre projet réseau : github.com/NajiH/projetReseau\n\nCheck si t’as les droits.\n\nÀ+,\nNaji",
+    "reda.taleb@etu.ig2i.fr"],
+
+  ["sent06", "TP manqué", "14 Oct",
+    "Bonjour M. Petit,\n\nJe n’ai pas pu assister au TP de mardi. Est-il possible de le rattraper la semaine prochaine ?\n\nMerci d’avance,\nNaji",
+    "nicolas.petit@ig2i.fr"],
+
+  ["sent05", "Demande d’attestation d’assiduité", "10 Oct",
+    "Bonjour,\n\nJe vous écris pour obtenir une attestation d’assiduité sur le mois de septembre/octobre pour mon dossier de bourse.\n\nMerci beaucoup,\nCordialement,\nNaji Hassain",
+    "admin.ig2i@centralelille.fr"],
+
+  ["sent04", "Réunion projet IoT", "03 Oct",
+    "Salut l’équipe,\n\nOn fait une visio mercredi 17h pour répartir les tâches du projet IoT ?\n\nDites-moi si dispo !\nNaji",
+    "groupe.iot@ig2i.fr"],
+
+  ["sent03", "Besoin de cours de Thermodynamique", "28 Sep",
+    "Bonjour M. Ricard,\n\nJe n’ai pas pu assister au dernier cours de thermodynamique. Serait-il possible d’avoir les slides ou des notes ?\n\nMerci d’avance,\nCordialement,\nNaji Hassain",
+    "jean.ricard@ig2i.fr"],
+
+  ["sent02", "Relecture du compte rendu", "23 Sep",
+    "Salut Camille,\n\nTu peux relire mon CR de TP2 ? Je veux être sûr qu’il est cohérent avant de le rendre.\n\nMerci à toi !\nNaji",
+    "camille.laurent@etu.ig2i.fr"],
+
+  ["sent01", "T’as noté les exos ?", "18 Sep",
+    "Salut Mehdi,\n\nT’as noté les exos que Mme Tabet a donnés aujourd’hui en Analyse ? J’étais à la CAF.\n\nMerci !\nNaji",
+    "mehdi.boukria@etu.ig2i.fr"]
+];
+
+
+
+    const sentContainer = document.getElementById("sent-mails");
+    const previewContainer = document.querySelector(".preview");
+
+    sentMessages.forEach(([id, subject, date, body, to]) => {
+      // Mail item (gauche)
+      const mailItem = document.createElement("div");
+      mailItem.className = "mail-item read";
+      mailItem.setAttribute("onclick", `showMail('${id}')`);
+      mailItem.innerHTML = `
+        <div>
+          <div class="mail-sender">Moi (Naji Hassain)</div>
+          <div class="mail-subject">${subject}</div>
+        </div>
+        <div class="mail-date">${date}</div>
+      `;
+      sentContainer.appendChild(mailItem);
+
+      // Preview (droite)
+      const previewMsg = document.createElement("div");
+      previewMsg.className = "preview-msg hidden";
+      previewMsg.id = id;
+      previewMsg.innerHTML = `
+        <h3>Moi (Naji Hassain) - ${subject}</h3>
+        <div><strong>À :</strong> ${to}</div>
+        <p>${body.replace(/\n/g, "<br/>")}</p>
+      `;
+      previewContainer.appendChild(previewMsg);
+    });
+  });
+
+ 
+  let sendMessages = [];
+
+function openCompose() {
+  document.getElementById('composeModal').classList.remove('hidden');
+}
+
+function closeCompose() {
+  if (confirm("Voulez-vous vraiment quitter sans envoyer ?")) {
+    document.getElementById('composeModal').classList.add('hidden');
+    clearComposeFields();
+  }
+}
+
+function clearComposeFields() {
+  document.getElementById('destinataire').value = '';
+  document.getElementById('titre').value = '';
+  document.getElementById('message').value = '';
+}
+
+function sendMessage() {
+  const to = document.getElementById('destinataire').value.trim();
+  const title = document.getElementById('titre').value.trim();
+  const content = document.getElementById('message').value.trim();
+
+  if (!to || !title || !content) {
+    alert("Veuillez remplir tous les champs.");
+    return;
+  }
+
+  // 1. Stocker dans l'historique
+  const message = {
+    destinataire: to,
+    titre: title,
+    contenu: content,
+    date: new Date().toLocaleDateString('fr-FR', {
+      day: '2-digit', month: 'short'
+    })
+  };
+  sendMessages.push(message);
+
+  // 2. Ajouter dans la liste envoyée
+  const sentList = document.getElementById('sent-mails');
+  const id = `sent-${sendMessages.length}`;
+
+  const mailItem = document.createElement('div');
+  mailItem.className = 'mail-item';
+  mailItem.onclick = () => showMail(id);
+  mailItem.innerHTML = `
+    <div>
+      <div class="mail-sender">${message.destinataire}</div>
+      <div class="mail-subject">${message.titre}</div>
+    </div>
+    <div class="mail-date">${message.date}</div>
+  `;
+
+  sentList.insertBefore(mailItem, sentList.firstChild);
+
+  // 3. Créer la preview associée
+  const preview = document.createElement('div');
+  preview.className = 'preview-msg hidden';
+  preview.id = id;
+  preview.innerHTML = `
+    <h3>${message.titre} (${message.date})</h3>
+    <p><strong>À :</strong> ${message.destinataire}</p>
+    <p>${message.contenu.replace(/\n/g, "<br/>")}</p>
+  `;
+
+  document.querySelector('.preview').insertBefore(preview, document.querySelector('.preview').firstChild);
+
+  // 4. Fermer et réinitialiser
+  document.getElementById('composeModal').classList.add('hidden');
+  clearComposeFields();
+}
+
+
+  
+</script>
+</body>
+</html>
